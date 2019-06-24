@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="darvorezbaGallery.css">
+        <script type="text/javascript" src="scripts/jquery.imgzoom.pack.js"></script>
+    </head>
+
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    
+    <body>
+        <!--NAVBAR MENU-->
+        <nav class="navbar navbar-expand-md navbar-dark "> <!-- bg-drark // bg-primary -->
+            <ul class="navbar-nav"></ul>
+                 <li class="nav-item">
+                    <a class="nav-link" href="homepage.html"><h4 class="navigationText">Начална страница</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pano.html"><h4 class="navigationText">Пaно</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="darvorezba.html"><h4 class="navigationText">Дърворезба</h4></a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pletki.html"><h4 class="navigationText">Плетки</h4></a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html"><h4 class="navigationText">За нас</h4></a>
+                    </li> 
+                    <li class="nav-item">
+                    <a class="nav-link" href="register.html"><h4 class="navigationText">Регистрация</h4></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="login.html"><h4 class="navigationText">Вход</h4></a>
+                 </li>     
+            </ul>
+        </nav>
+
+        <!--PICTURES-->
+        <div class="row">
+            <div class="column">
+                <img src="pictures/bf3.jpg">
+            </div>
+            <div class="column">
+                <img src="pictures/cvetq.jpg">
+            </div>
+            <div class="column">
+                <img src="pictures/panel.jpg">
+            </div>
+
+            <div class="column">
+                <img src="pictures/darvorezba.jpg">
+            </div>
+            <div class="column">
+                <img src="pictures/pano1.jpg">
+            </div>
+            <div class="column">
+                <img src="pictures/pano2.jpg">
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+        var small={width: "300px",height: "200px"};
+        var large={width: "600px",height: "500px"};
+        var count=1; 
+        $("img").css(small).on('click',function () { 
+            $(this).animate((count==1)?large:small);
+            count = 1-count;
+        });
+    });
+          </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+</html>
